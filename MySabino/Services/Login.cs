@@ -12,21 +12,8 @@ namespace MySabino
     /// <summary>
     /// Function to authenticate with web service.
     /// </summary>
-    public class Login : INotifyPropertyChanged
-    {
-        private bool _IsSignedIn;
-        public bool IsSignedIn
-        {
-            get
-            {
-                return _IsSignedIn;
-            }
-            private set
-            {
-                _IsSignedIn = value;
-                RaisePropertyChanged();
-            }
-        }
+    public class Login
+	{
         internal bool Authenticate(LoginParameters user)
         {
             bool isLoggedIn = false;
@@ -61,24 +48,9 @@ namespace MySabino
                 RockService.IsAuthenticated = true;
             }
 
-            IsSignedIn = isLoggedIn;
+			App.IsUserLoggedIn = isLoggedIn;
 
             return isLoggedIn;
-        }
-
-        public Login()
-        {
-            IsSignedIn = false;
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void RaisePropertyChanged([CallerMemberName] string property = null)
-        {
-            var propChanged = PropertyChanged;
-            if (propChanged != null)
-            {
-                propChanged(this, new PropertyChangedEventArgs(property));
-            }
         }
     }
 }
