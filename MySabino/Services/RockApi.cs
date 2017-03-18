@@ -28,7 +28,7 @@ namespace MySabino
             client.DefaultRequestHeaders.Add("Authorization-Token", "");
 
             Client = client;
-
+                        
             return Client;
         }
 
@@ -36,5 +36,13 @@ namespace MySabino
         {
 
         }
+    }
+
+    public static class RockService
+    {
+        public static HttpClient Client;
+        public static HttpClientHandler Handler;
+        public static CookieContainer Cookies;
+        public static bool IsAuthenticated;
     }
 }

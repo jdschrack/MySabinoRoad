@@ -2,29 +2,57 @@
 
 namespace MySabino
 {
-	public partial class App : Application
-	{
+    public partial class App : Application
+    {
         internal static bool IsUserLoggedIn = false;
-		public App()
-		{
-			InitializeComponent();
+        public App()
+        {
+            InitializeComponent();
 
-			MainPage = new MySabinoPage();
-		}
+            var login = new Login();
+            login.PropertyChanged += SingnedIn_PropertyChanged;
 
-		protected override void OnStart()
-		{
-			// Handle when your app starts
-		}
+            MainPage = new MySabinoPage();
+        }
 
-		protected override void OnSleep()
-		{
-			// Handle when your app sleeps
-		}
+        void SingnedIn_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            var login = sender as Login;
 
-		protected override void OnResume()
-		{
-			// Handle when your app resumes
-		}
-	}
+            switch (e.PropertyName)
+            {
+                case "IsSignedIn":
+                    {
+                        if (login.IsSignedIn)
+                        {
+                            MainPage = new View.MainPage();
+                        }
+                        else
+                        {
+                            if (!(MainPage is MySabinoPage))
+                            {
+                                MainPage = new MySabinoPage();
+                            }
+                        }
+                        break;
+                    }
+
+            }
+        }
+
+        protected override void OnStart()
+        {
+            // Handle when your app starts
+        }
+
+        protected override void OnSleep()
+        {
+            // Handle when your app sleeps
+        }
+
+        protected override void OnResume()
+        {
+            // Handle when your app resumes
+        }
+    }
 }

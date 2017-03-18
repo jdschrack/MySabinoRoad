@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="MySabino.View.MainPage"
+                  xmlns:Sabino="clr-namespace:MySabino">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <StackLayout Orientation="Vertical">
+                <Button Text="Home" />
+                <Button Text="Directory"/>
+                <Button Text="Sermons"/>
+                <Button Text="Events"/>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <Sabino:MySabinoPage />
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
