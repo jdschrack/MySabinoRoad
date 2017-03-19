@@ -14,7 +14,7 @@ namespace MySabinoRoad
         public HttpClientHandler Handler;
         public CookieContainer Cookies;
 
-        internal Uri baseAddress = new Uri("https://office.sabinoroad.org/api/");
+        internal Uri baseAddress = new Uri("");
         public HttpClient CreateClient()
         {
             Handler = new HttpClientHandler();
@@ -25,11 +25,15 @@ namespace MySabinoRoad
             client.BaseAddress = baseAddress;
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-            client.DefaultRequestHeaders.Add("Authorization-Token", "d53L8ThfaymkGZt8MH8tvXTQ");
+            client.DefaultRequestHeaders.Add("Authorization-Token", "");
 
             Client = client;
                         
             return Client;
+
+			RockService.Client = client;
+			RockService.Handler = Handler;
+			RockService.Cookies = Cookies;
         }
 
         public RockApi()

@@ -12,6 +12,4 @@ namespace MySabinoRoad.Model
         public bool Persisted { get; set; }
         public string Username { get; set; }
     }
-
-
 }

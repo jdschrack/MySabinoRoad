@@ -1,11 +1,12 @@
 ﻿using Xamarin.Forms;
+using MySabinoRoad.Model;
 
 namespace MySabinoRoad
 {
     public partial class App : Application
     {
         public static bool IsUserLoggedIn = false;
-
+		public static Person CurrentPerson;
         public App()
         {
             //InitializeComponent();

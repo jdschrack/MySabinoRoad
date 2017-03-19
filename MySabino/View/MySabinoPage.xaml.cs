@@ -30,6 +30,8 @@ namespace MySabinoRoad
             }
             else
             {
+				App.CurrentPerson = await Rock.People.GetCurrentPerson();
+
                 if (Device.OS == TargetPlatform.iOS)
                 {
                     await Navigation.PopToRootAsync();

@@ -1,9 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MySabinoRoad.View.NavPageDetail"
-             Title="Welcome to MySabinoRoad">
-    <StackLayout Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="Fill" Padding="10">
-        <Label Text="Welcome to Sabino Road" HorizontalOptions="Center" VerticalOptions="Center"></Label>
-    </StackLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="MySabinoRoad.View.NavPageDetail" Title="Sabino Road Baptist Church">
+	<StackLayout Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="Fill" Padding="10">
+		<Label Text="Welcome to Sabino Road" HorizontalOptions="Center" VerticalOptions="Center">
+		</Label>
+	</StackLayout>
 </ContentPage>

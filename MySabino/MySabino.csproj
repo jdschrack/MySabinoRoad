@@ -30,6 +30,9 @@
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
     <EmbeddedResource Include="View\MySabinoPage.xaml" />
+    <EmbeddedResource Include="View\MenuPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -39,9 +42,6 @@
     <Compile Include="Model\LoginParameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Login.cs" />
-    <Compile Include="View\MasterMenu.xaml.cs">
-      <DependentUpon>MasterMenu.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\MySabinoPage.xaml.cs">
       <DependentUpon>MySabinoPage.xaml</DependentUpon>
     </Compile>
@@ -52,6 +52,22 @@
     <Compile Include="View\NavPageDetail.xaml.cs">
       <DependentUpon>NavPageDetail.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\MenuPage.xaml.cs">
+      <DependentUpon>MenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\BinaryFileType.cs" />
+    <Compile Include="Model\ConnectionStatusValue.cs" />
+    <Compile Include="Model\EntityType.cs" />
+    <Compile Include="Model\MaritalStatusValue.cs" />
+    <Compile Include="Model\Person.cs" />
+    <Compile Include="Model\PersonSearchResult.cs" />
+    <Compile Include="Model\PhoneNumber.cs" />
+    <Compile Include="Model\Photo.cs" />
+    <Compile Include="Model\RecordStatusValue.cs" />
+    <Compile Include="Model\RecordTypeValue.cs" />
+    <Compile Include="Model\StorageEntityType.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Services\Rock\People.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -86,16 +102,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="View\MasterMenu.xaml">
+    <EmbeddedResource Include="View\NavPageDetail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="View\NavPageDetail.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
+    <Folder Include="Services\Rock\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
