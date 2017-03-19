@@ -9,15 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace MySabinoRoad.View
 {
-
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NavPage : MasterDetailPage
+    public partial class NavPageDetail : ContentPage
     {
-        public NavPage()
+        public NavPageDetail()
         {
             InitializeComponent();
         }
-
     }
-
 }

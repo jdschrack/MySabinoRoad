@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 
-namespace MySabino
+namespace MySabinoRoad
 {
 
     public class RockApi
@@ -14,7 +14,7 @@ namespace MySabino
         public HttpClientHandler Handler;
         public CookieContainer Cookies;
 
-        internal Uri baseAddress = new Uri("");
+        internal Uri baseAddress = new Uri("https://office.sabinoroad.org/api/");
         public HttpClient CreateClient()
         {
             Handler = new HttpClientHandler();
@@ -25,7 +25,7 @@ namespace MySabino
             client.BaseAddress = baseAddress;
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-            client.DefaultRequestHeaders.Add("Authorization-Token", "");
+            client.DefaultRequestHeaders.Add("Authorization-Token", "d53L8ThfaymkGZt8MH8tvXTQ");
 
             Client = client;
                         

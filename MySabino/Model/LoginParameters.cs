@@ -4,7 +4,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 
-namespace MySabino.Model
+namespace MySabinoRoad.Model
 {
     public class LoginParameters
     {

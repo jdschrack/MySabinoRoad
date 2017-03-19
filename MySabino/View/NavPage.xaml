@@ -1,21 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" 
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-	x:Class="MySabino.NavPage"
-	xmlns:local="clr-namespace:MySabino;assembly=MySabino">
-	<MasterDetailPage.Master>
-	        <ContentPage Title="Menu">
-	            <StackLayout Orientation="Vertical">
-	                <Button Text="Home" />
-	                <Button Text="Directory"/>
-	                <Button Text="Sermons"/>
-	                <Button Text="Events"/>
-	            </StackLayout>
-	        </ContentPage>
-	    </MasterDetailPage.Master>
-	    <MasterDetailPage.Detail>
-	        <ContentPage>
-	        <Label Text="Welcome"/>
-		</ContentPage>
-	    </MasterDetailPage.Detail>
-	</MasterDetailPage>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MySabinoRoad.View.NavPage"
+             xmlns:pages="clr-namespace:MySabinoRoad.View"
+                  NavigationPage.HasNavigationBar="True">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <StackLayout Orientation="Vertical">
+                <Button Text="Home" />
+                <Button Text="Directory"/>
+                <Button Text="Sermons"/>
+                <Button Text="Events"/>
+            </StackLayout>
+        </ContentPage>
+
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <pages:NavPageDetail />
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

@@ -7,8 +7,8 @@
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UseMSBuildEngine>true</UseMSBuildEngine>
     <OutputType>Library</OutputType>
-    <RootNamespace>MySabino</RootNamespace>
-    <AssemblyName>MySabino</AssemblyName>
+    <RootNamespace>MySabinoRoad</RootNamespace>
+    <AssemblyName>MySabinoRoad</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
   </PropertyGroup>
@@ -30,23 +30,27 @@
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
     <EmbeddedResource Include="View\MySabinoPage.xaml" />
-    <EmbeddedResource Include="View\NavPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ModelView\MasterMenuItem.cs" />
     <Compile Include="Model\LoginParameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Login.cs" />
+    <Compile Include="View\MasterMenu.xaml.cs">
+      <DependentUpon>MasterMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MySabinoPage.xaml.cs">
       <DependentUpon>MySabinoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Services\RockApi.cs" />
     <Compile Include="View\NavPage.xaml.cs">
       <DependentUpon>NavPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\NavPageDetail.xaml.cs">
+      <DependentUpon>NavPageDetail.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -73,10 +77,25 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ModelView\" />
+    <Content Include="Images\untitled.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\untitled.png" />
+    <EmbeddedResource Include="View\NavPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\MasterMenu.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="View\NavPageDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.3.193\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

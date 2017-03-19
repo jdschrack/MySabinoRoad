@@ -1,8 +1,8 @@
 ﻿using Xamarin.Forms;
 using System;
-using MySabino.Model;
+using MySabinoRoad.Model;
 
-namespace MySabino
+namespace MySabinoRoad
 {
     public partial class MySabinoPage : ContentPage
     {
@@ -12,7 +12,7 @@ namespace MySabino
         }
 
 
-        void btnLogin_Clicked(object sender, EventArgs e)
+        public async void btnLogin_Clicked(object sender, EventArgs e)
         {
             var user = new LoginParameters();
             user.Username = userNameEntry.Text;
@@ -21,18 +21,21 @@ namespace MySabino
 
             Login login = new Login();
 
-			if (!login.Authenticate(user))
-			{
-				App.IsUserLoggedIn = false;
-				statusLabel.Text = "Login Failed Please Try Again";
-				passwordEntry.Text = string.Empty;
-				statusLabel.TextColor = Color.Red;
-			}
-			else
-			{
-				App.IsUserLoggedIn = true;
-				Application.Current.MainPage = new NavigationPage(new NavPage());
-			}
+            if (!login.Authenticate(user))
+            {
+                App.IsUserLoggedIn = false;
+                statusLabel.Text = "Login Failed Please Try Again";
+                passwordEntry.Text = string.Empty;
+                statusLabel.TextColor = Color.Red;
+            }
+            else
+            {
+                if (Device.OS == TargetPlatform.iOS)
+                {
+                    await Navigation.PopToRootAsync();
+                }
+                Application.Current.MainPage = new View.NavPage();
+            }
         }
     }
 }

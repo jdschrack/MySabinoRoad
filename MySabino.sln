@@ -4,9 +4,9 @@ VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySabino", "MySabino\MySabino.csproj", "{CDEA1E41-C350-42F9-B1B1-9053ED59D354}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySabino.iOS", "iOS\MySabino.iOS.csproj", "{95F0AFB5-DA6E-43CD-80BC-E9E1ECB7AD17}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySabinoRoad.iOS", "iOS\MySabinoRoad.iOS.csproj", "{95F0AFB5-DA6E-43CD-80BC-E9E1ECB7AD17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySabino.Droid", "Droid\MySabino.Droid.csproj", "{BD0ED21C-E788-4F10-BA62-0359A9ACC836}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySabinoRoad.Droid", "Droid\MySabinoRoad.Droid.csproj", "{BD0ED21C-E788-4F10-BA62-0359A9ACC836}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

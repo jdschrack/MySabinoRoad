@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:MySabino" x:Class="MySabino.MySabinoPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:MySabinoRoad" 
+             x:Class="MySabinoRoad.MySabinoPage"
+             NavigationPage.HasNavigationBar="False" 
+             NavigationPage.HasBackButton="False">
     <StackLayout VerticalOptions="CenterAndExpand" Padding="25" HorizontalOptions="CenterAndExpand">
         <Image Source="untitled.png" HeightRequest="100" WidthRequest="100" />
         <Label Text="MySabinoRoad" Font="32" VerticalOptions="Center" HorizontalOptions="Center" />

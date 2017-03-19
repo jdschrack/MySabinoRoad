@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace MySabino.iOS
+namespace MySabinoRoad.iOS
 {
 	public class Application
 	{
