@@ -28,18 +28,31 @@ namespace MySabinoRoad
             client.DefaultRequestHeaders.Add("Authorization-Token", "");
 
             Client = client;
-                        
-            return Client;
 
 			RockService.Client = client;
 			RockService.Handler = Handler;
 			RockService.Cookies = Cookies;
+
+                        
+            return Client;
         }
 
         public RockApi()
         {
 
         }
+
+
+		/// <summary>
+		/// Once a user logs into the system and we retrieve their context we need to clean up and force API token security.  
+		/// This will clear the client, handler, and cookies to allow for a new creation.
+		/// </summary>
+		public void CleanUpClient()
+		{
+			RockService.Client = new HttpClient();
+			RockService.Cookies = new CookieContainer();
+			RockService.Handler = new HttpClientHandler();
+		}
     }
 
     public static class RockService

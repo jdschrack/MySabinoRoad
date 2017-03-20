@@ -24,12 +24,11 @@
                 </Grid.ColumnDefinitions>
                 <Label Text=" " x:Name="statusLabel" TextColor="Red" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" VerticalOptions="Fill"/>
                 <Label Text="User ID" VerticalOptions="Center" HorizontalOptions="End" Grid.Row="1" Grid.Column="0" />
-                <Entry Placeholder="User Id" x:Name="userNameEntry" WidthRequest="150" HorizontalOptions="Fill" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" />
+                <local:NoHelperEntry Placeholder="User Id" x:Name="userNameEntry" WidthRequest="150" HorizontalOptions="Fill" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" />
                 <Label Text="Password" VerticalOptions="Center" HorizontalOptions="End"  Grid.Row="2" Grid.Column="0" />
                 <Entry IsPassword="true" x:Name="passwordEntry" Placeholder="Password" HorizontalOptions="Fill" VerticalOptions="Center" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" />
 
             </Grid>
-
         </StackLayout>
         <Button Text="Login" x:Name="btnLogin" Clicked="btnLogin_Clicked" />
         <Label HorizontalTextAlignment="Center" Margin="2" VerticalTextAlignment="Center" Font="8" Text="This application is for members and attendees of Sabino Road Baptist Church.  Unlawful or unauthorized use of the application is strictly prohibited." />

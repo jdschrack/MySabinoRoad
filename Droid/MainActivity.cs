@@ -21,7 +21,7 @@ namespace MySabinoRoad.Droid
 			base.OnCreate(bundle);
 
 			global::Xamarin.Forms.Forms.Init(this, bundle);
-
+			ImageCircle.Forms.Plugin.Droid.ImageCircleRenderer.Init();
 			LoadApplication(new App());
 		}
 	}

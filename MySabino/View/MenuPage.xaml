@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MySabinoRoad.View.MenuPage" Padding="0,40,0,0" Title="Menu" Icon="hamburger.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MySabinoRoad.View.MenuPage" xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions" Padding="0,40,0,0" Title="Menu" Icon="hamburger.png">
 	<ContentPage.Content>
 		<StackLayout VerticalOptions="FillAndExpand">
-			<Image x:Name="imgUser" Source=""/>
-			<Label Text="" x:Name="txtUser" HorizontalOptions="CenterAndExpand" /> 
+			<controls:CircleImage x:Name="imgUser">
+			</controls:CircleImage>
+			<Label Text="" x:Name="txtUser" HorizontalOptions="CenterAndExpand" />
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

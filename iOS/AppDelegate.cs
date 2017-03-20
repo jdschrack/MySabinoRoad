@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
 using Foundation;
 using UIKit;
+using ImageCircle;
 
 namespace MySabinoRoad.iOS
 {
@@ -13,7 +13,7 @@ namespace MySabinoRoad.iOS
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
 			global::Xamarin.Forms.Forms.Init();
-
+			ImageCircle.Forms.Plugin.iOS.ImageCircleRenderer.Init();
 			LoadApplication(new App());
 
 			return base.FinishedLaunching(app, options);

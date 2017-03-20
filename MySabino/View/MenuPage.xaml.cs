@@ -16,11 +16,24 @@ namespace MySabinoRoad.View
 
 			if (person.Photo != null)
 			{
-				imgUser.Source = person.Photo.Url;
+				imgUser.Source = ImageSource.FromUri(new Uri(person.Photo.Url));
+				imgUser.WidthRequest = 90;
+				imgUser.HeightRequest = 90;
+				imgUser.Aspect = Aspect.AspectFit;
+			}
+			else if (person.Gender == 2)
+			{
+				imgUser.Source = "female.jpg";
+				imgUser.WidthRequest = 90;
+				imgUser.HeightRequest = 90;
+				imgUser.Aspect = Aspect.AspectFit; 
 			}
 			else
 			{
-				imgUser.Source = "https://sabinoroad.org/Assets/Images/person-no-photo-male.svg?&height=80&width=80&mode=crop&scale=both";
+				imgUser.Source = "male.jpg";
+				imgUser.WidthRequest = 90;
+				imgUser.HeightRequest = 90;
+				imgUser.Aspect = Aspect.AspectFit;
 			}
 		}
 
