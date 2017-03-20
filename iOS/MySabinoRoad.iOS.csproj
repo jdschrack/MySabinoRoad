@@ -126,6 +126,7 @@
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
@@ -139,9 +140,7 @@
     <Content Include="Resources\untitled.png" />
     <Content Include="srbc_logo.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BundleResource Include="Resources\male.jpg" />
     <BundleResource Include="Resources\female.jpg" />

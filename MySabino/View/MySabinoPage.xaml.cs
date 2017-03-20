@@ -36,7 +36,7 @@ namespace MySabinoRoad
                 {
                     await Navigation.PopToRootAsync();
                 }
-                Application.Current.MainPage = new View.NavPage();
+                Application.Current.MainPage = new NavPage();
             }
         }
     }

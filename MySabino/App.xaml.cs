@@ -11,7 +11,7 @@ namespace MySabinoRoad
         {
             //InitializeComponent();
             
-            //MainPage = new NavigationPage(new View.NavPage());
+            //MainPage = new NavigationPage(new NavPage());
 
             if (!IsUserLoggedIn)
             {
@@ -19,7 +19,7 @@ namespace MySabinoRoad
             }
             else
             {
-                MainPage = new NavigationPage(new View.NavPage());
+                MainPage = new NavigationPage(new NavPage());
             }            
         }
 

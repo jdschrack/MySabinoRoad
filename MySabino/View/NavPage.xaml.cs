@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace MySabinoRoad.View
+namespace MySabinoRoad
 {
 
     [XamlCompilation(XamlCompilationOptions.Compile)]

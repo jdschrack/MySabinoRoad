@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	x:Class="MySabinoRoad.View.NavPageDetail" Title="Sabino Road Baptist Church">
-	<StackLayout Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="Fill" Padding="10">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MySabinoRoad.NavPageDetail" 
+             Title="MySabinoRoad"
+             BackgroundColor="#edeae6">
+    <ResourceDictionary>
+        <Color x:Key="PageBackgroundColor">#edeae6</Color>
+        <Color x:Key="MenuBackgroundColor">#282526</Color>
+        <Color x:Key="MenuFontColor">#d3cec5</Color>
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="#c2b8a7"/>
+            <Setter Property="BarTextColor" Value="#6a6a6a"/>
+        </Style>
+    </ResourceDictionary>
+    <StackLayout Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="Fill" Padding="10">
 		<Label Text="Welcome to Sabino Road" HorizontalOptions="Center" VerticalOptions="Center">
 		</Label>
 	</StackLayout>
