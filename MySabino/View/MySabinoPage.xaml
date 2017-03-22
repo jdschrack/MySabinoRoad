@@ -5,16 +5,7 @@
              x:Class="MySabinoRoad.MySabinoPage"
              NavigationPage.HasNavigationBar="False" 
              NavigationPage.HasBackButton="False">
-    <ResourceDictionary>
-        <Color x:Key="PageBackgroundColor">#edeae6</Color>
-        <Color x:Key="MenuBackgroundColor">#282526</Color>
-        <Color x:Key="MenuFontColor">#d3cec5</Color>
-        <Style TargetType="NavigationPage">
-            <Setter Property="BarBackgroundColor" Value="#c2b8a7"/>
-            <Setter Property="BarTextColor" Value="#6a6a6a"/>
-        </Style>
-    </ResourceDictionary>
-    <StackLayout VerticalOptions="CenterAndExpand" Padding="25" HorizontalOptions="CenterAndExpand">
+	<StackLayout VerticalOptions="CenterAndExpand" Padding="25" HorizontalOptions="CenterAndExpand">
         <Image Source="untitled.png" HeightRequest="100" WidthRequest="100" />
         <Label Text="MySabinoRoad" Font="32" VerticalOptions="Center" HorizontalOptions="Center" />
         <Label Text="Sabino Road Baptist Church" VerticalOptions="Center" HorizontalOptions="Center" />

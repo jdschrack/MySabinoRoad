@@ -1,27 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" 
-                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-                  x:Class="MySabinoRoad.NavPage" 
-                  xmlns:pages="clr-namespace:MySabinoRoad" 
-                  MasterBehavior="SplitOnLandscape"
-                  BackgroundColor="#c2b8a7">
-    <ResourceDictionary>
-        <Color x:Key="PageBackgroundColor">#edeae6</Color>
-        <Color x:Key="MenuBackgroundColor">#282526</Color>
-        <Color x:Key="MenuFontColor">#d3cec5</Color>
-        <Style TargetType="NavigationPage">
-            <Setter Property="BarBackgroundColor" Value="#c2b8a7"/>
-            <Setter Property="BarTextColor" Value="#6a6a6a"/>
-        </Style>
-    </ResourceDictionary>
-    <MasterDetailPage.Master>
-        <pages:MenuPage />
-    </MasterDetailPage.Master>
-    <MasterDetailPage.Detail>
-        <NavigationPage>
-            <x:Arguments>
-                <pages:NavPageDetail />
-            </x:Arguments>
-        </NavigationPage>
-    </MasterDetailPage.Detail>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MySabinoRoad.NavPage" xmlns:pages="clr-namespace:MySabinoRoad" MasterBehavior="SplitOnLandscape" BackgroundColor="#c2b8a7" Title="MySabinoRoad" Padding="0, 40, 0, 0">
+	<MasterDetailPage.Master>
+		<pages:MenuPage x:Name="menuPage" />
+	</MasterDetailPage.Master>
+	<MasterDetailPage.Detail>
+		<NavigationPage>
+			<NavigationPage.BarBackgroundColor>#c2b8a7</NavigationPage.BarBackgroundColor>
+			<NavigationPage.BarTextColor>#6a6a6a</NavigationPage.BarTextColor>
+			<x:Arguments>
+				<pages:NavPageDetail />
+			</x:Arguments>
+		</NavigationPage>
+	</MasterDetailPage.Detail>
 </MasterDetailPage>

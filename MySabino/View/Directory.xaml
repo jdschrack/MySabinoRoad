@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="MySabinoRoad.Directory"
+	BackgroundColor="#edeae6"
+	Title="Church Directory">
+	<ContentPage.Content>
+		<ListView x:Name="GroupedView" 
+			ItemsSource="{Binding PeopleGrouped}" 
+			GroupDisplayBinding="{Binding Key}" 
+			GroupShortNameBinding="{Binding Key}" 
+			IsGroupingEnabled="true"
+             BackgroundColor="#edeae6">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<ViewCell>
+						<StackLayout Orientation="Vertical">
+							<StackLayout Orientation="Horizontal" Padding="20, 0, 0, 0" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand">
+								<Label Text="{Binding FirstName}" TextColor="#6a6a6a" />
+								<Label Text="{Binding LastName}" FontAttributes="Bold" TextColor="#6a6a6a" />
+							</StackLayout>
+						</StackLayout>
+					</ViewCell>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</ContentPage.Content>
+</ContentPage>

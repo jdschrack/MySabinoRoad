@@ -49,6 +49,10 @@ namespace MySabinoRoad
 		/// </summary>
 		public void CleanUpClient()
 		{
+			this.Client = null;
+			this.Handler = null;
+			this.Cookies = null;
+
 			RockService.Client = new HttpClient();
 			RockService.Cookies = new CookieContainer();
 			RockService.Handler = new HttpClientHandler();

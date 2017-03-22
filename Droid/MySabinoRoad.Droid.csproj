@@ -146,6 +146,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\male.jpg" />
     <AndroidResource Include="Resources\drawable-xxhdpi\female.jpg" />
     <AndroidResource Include="Resources\drawable-xxhdpi\male.jpg" />
+    <AndroidResource Include="Resources\values\colors.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\untitled.png" />
