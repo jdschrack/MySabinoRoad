@@ -12,11 +12,20 @@ namespace MySabinoRoad.iOS
 	{
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
-			global::Xamarin.Forms.Forms.Init();
+            var statusBar = UIApplication.SharedApplication.ValueForKey(new NSString("statusBar")) as UIView;
+
+            if (statusBar.RespondsToSelector(new ObjCRuntime.Selector("setBackgroundColor:")))
+            {
+                statusBar.BackgroundColor = UIColor.White;
+                
+            }
+
+            global::Xamarin.Forms.Forms.Init();
 			ImageCircle.Forms.Plugin.iOS.ImageCircleRenderer.Init();
 			LoadApplication(new App());
+            
 
-			return base.FinishedLaunching(app, options);
+            return base.FinishedLaunching(app, options);
 		}
 	}
 }

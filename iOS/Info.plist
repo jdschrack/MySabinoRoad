@@ -40,5 +40,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIRequiresFullScreen</key>
+	<false/>
+	<key>UIViewControllerBasedStatusBarAppearance </key>
+	<false/>
 </dict>
 </plist>

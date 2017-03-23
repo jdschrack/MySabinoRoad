@@ -4,25 +4,52 @@
 	x:Class="MySabinoRoad.Directory"
 	BackgroundColor="#edeae6"
 	Title="Church Directory">
-	<ContentPage.Content>
-		<ListView x:Name="GroupedView" 
-			ItemsSource="{Binding PeopleGrouped}" 
-			GroupDisplayBinding="{Binding Key}" 
-			GroupShortNameBinding="{Binding Key}" 
-			IsGroupingEnabled="true"
-             BackgroundColor="#edeae6">
-			<ListView.ItemTemplate>
-				<DataTemplate>
-					<ViewCell>
-						<StackLayout Orientation="Vertical">
-							<StackLayout Orientation="Horizontal" Padding="20, 0, 0, 0" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand">
-								<Label Text="{Binding FirstName}" TextColor="#6a6a6a" />
-								<Label Text="{Binding LastName}" FontAttributes="Bold" TextColor="#6a6a6a" />
-							</StackLayout>
-						</StackLayout>
-					</ViewCell>
-				</DataTemplate>
-			</ListView.ItemTemplate>
-		</ListView>
-	</ContentPage.Content>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+            <SearchBar Placeholder="Search" TextChanged="FilterContacts" x:Name="searchBar" HeightRequest="50">
+            </SearchBar>
+            <ListView x:Name="GroupedView" 
+                      ItemsSource="{Binding PeopleGrouped}" 
+                      GroupDisplayBinding="{Binding Key}" 
+                      GroupShortNameBinding="{Binding Key}" 
+                      IsGroupingEnabled="true"
+                      IsPullToRefreshEnabled="False"
+                      BackgroundColor="#edeae6">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal" Padding="20, 0, 0, 0" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand">
+                                    <Label Text="{Binding FirstName}" TextColor="#6a6a6a" />
+                                    <Label Text="{Binding LastName}" FontAttributes="Bold" TextColor="#6a6a6a" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView x:Name="GroupedView2" 
+                      ItemsSource="{Binding People}"                       
+                      IsGroupingEnabled="False"
+                      BackgroundColor="#edeae6">
+                <ListView.Header>
+                    <StackLayout Padding="10,5,0,5" BackgroundColor="#c2b8a7">
+                        <Label Text="Search Results" TextColor="#6a6a6a" />
+                    </StackLayout>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal" Padding="20, 0, 0, 0" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand">
+                                    <Label Text="{Binding FirstName}" TextColor="#6a6a6a" />
+                                    <Label Text="{Binding LastName}" FontAttributes="Bold" TextColor="#6a6a6a" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>
