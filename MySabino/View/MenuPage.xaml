@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="MySabinoRoad.MenuPage" 
-             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions" Padding="0,40,0,0" Title="Menu" Icon="hamburger.png" BackgroundColor="{StaticResource PageBackgroundColor}">
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions" 
+	         Padding="0,40,0,0" Title="Menu" Icon="hamburger.png" 
+			 BackgroundColor="{StaticResource PageBackgroundColor}">
 	<ContentPage.Resources>
 		<ResourceDictionary>
 			<Color x:Key="PageBackgroundColor">#282526</Color>
@@ -10,7 +12,7 @@
 		</ResourceDictionary>
 	</ContentPage.Resources>
 	<ContentPage.Content>
-		<StackLayout VerticalOptions="FillAndExpand">
+		<StackLayout VerticalOptions="FillAndExpand" BackgroundColor="{StaticResource PageBackgroundColor}">
 			<Grid HorizontalOptions="FillAndExpand">
 				<Grid.RowDefinitions>
 					<RowDefinition Height="2*" />
@@ -25,7 +27,7 @@
 					<Label Text="" x:Name="txtConnectionStatus" HorizontalOptions="Start" VerticalOptions="Center" FontSize="10" TextColor="{StaticResource NormalTextColor}" />
 				</StackLayout>
 			</Grid>
-            <ListView x:Name="listView" VerticalOptions="FillAndExpand" SeparatorVisibility="None" >
+            <ListView x:Name="listView" VerticalOptions="FillAndExpand" SeparatorVisibility="None" BackgroundColor="{StaticResource PageBackgroundColor}" >
 				<ListView.ItemTemplate>
 					<DataTemplate>                        
 						<ViewCell>

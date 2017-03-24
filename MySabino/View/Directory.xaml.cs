@@ -18,6 +18,10 @@ namespace MySabinoRoad
             this.BindingContext = PeopleGrouped;
             GroupedView2.IsVisible = false;
             GroupedView.ItemsSource = PeopleGrouped;
+
+			GroupedView.ItemTapped += async (sender, e) => await Navigation.PushAsync(new PersonPage((Person)e.Item));
+			GroupedView2.ItemTapped += async (sender, e) => await Navigation.PushAsync(new PersonPage((Person)e.Item));
+
         }
 
         public async void GetPageDetails()

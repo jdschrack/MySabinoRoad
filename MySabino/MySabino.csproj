@@ -36,6 +36,9 @@
     <EmbeddedResource Include="View\Directory.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\PersonPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -75,6 +78,18 @@
     <Compile Include="Services\Rock\PeopleSearch.cs" />
     <Compile Include="View\Directory.xaml.cs">
       <DependentUpon>Directory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GroupRole.cs" />
+    <Compile Include="Model\NumberTypeValue.cs" />
+    <Compile Include="Model\TitleValue.cs" />
+    <Compile Include="Model\FamilyMember.cs" />
+    <Compile Include="Model\Geography.cs" />
+    <Compile Include="Model\GeoPoint.cs" />
+    <Compile Include="Model\HomeLocation.cs" />
+    <Compile Include="Model\Family.cs" />
+    <Compile Include="Services\Rock\Family.cs" />
+    <Compile Include="View\PersonPage.xaml.cs">
+      <DependentUpon>PersonPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

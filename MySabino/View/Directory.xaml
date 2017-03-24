@@ -3,7 +3,7 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	x:Class="MySabinoRoad.Directory"
 	BackgroundColor="#edeae6"
-	Title="Church Directory">
+	Title="Directory">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
             <SearchBar Placeholder="Search" TextChanged="FilterContacts" x:Name="searchBar" HeightRequest="50">

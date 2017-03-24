@@ -1,21 +1,13 @@
-﻿namespace MySabinoRoad.Model
+﻿using System;
+namespace MySabinoRoad.Model
 {
-	public class BinaryFileType
+	public class NumberTypeValue
 	{
-		public StorageEntityType StorageEntityType { get; set; }
 		public bool IsSystem { get; set; }
-		public string Name { get; set; }
+		public int DefinedTypeId { get; set; }
+		public int Order { get; set; }
+		public string Value { get; set; }
 		public string Description { get; set; }
-		public string IconCssClass { get; set; }
-		public int StorageEntityTypeId { get; set; }
-		public bool AllowCaching { get; set; }
-		public bool RequiresViewSecurity { get; set; }
-		public object MaxWidth { get; set; }
-		public object MaxHeight { get; set; }
-		public int PreferredFormat { get; set; }
-		public int PreferredResolution { get; set; }
-		public int PreferredColorDepth { get; set; }
-		public bool PreferredRequired { get; set; }
 		public object CreatedDateTime { get; set; }
 		public object ModifiedDateTime { get; set; }
 		public object CreatedByPersonAliasId { get; set; }

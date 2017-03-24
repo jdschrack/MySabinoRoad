@@ -1,4 +1,6 @@
-﻿namespace MySabinoRoad.Model
+﻿using System;
+
+namespace MySabinoRoad.Model
 {
     public class RecordTypeValue
     {
@@ -7,8 +9,8 @@
         public int Order { get; set; }
         public string Value { get; set; }
         public string Description { get; set; }
-        public object CreatedDateTime { get; set; }
-        public object ModifiedDateTime { get; set; }
+        public DateTime CreatedDateTime { get; set; }
+        public DateTime ModifiedDateTime { get; set; }
         public object CreatedByPersonAliasId { get; set; }
         public object ModifiedByPersonAliasId { get; set; }
         public bool ModifiedAuditValuesAlreadyUpdated { get; set; }
